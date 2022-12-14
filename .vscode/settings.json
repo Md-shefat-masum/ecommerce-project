@@ -1,0 +1,10 @@
+{
+    "less.compile": {
+        "sourceMap": true,
+        "compress": true,
+        "main": [
+            "${workspaceRoot}\\assets\\less\\styles.less"
+        ],
+        "out": "${workspaceRoot}\\assets\\css\\styles.css"
+    }
+}

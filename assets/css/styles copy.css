@@ -1,0 +1,230 @@
+/* reset css */
+:root {
+	--light_black: #334141;
+	--dark_black: #333e48;
+}
+
+body,
+html {
+	outline: 0;
+	padding: 0;
+	margin: 0;
+	/* overflow-x: hidden; */
+	font-family: "Open Sans", sans-serif;
+}
+
+div,
+ul,
+header,
+section,
+nav,
+footer,
+main {
+	box-sizing: border-box;
+	position: relative;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	width: 1200px;
+	/* border: 1px solid red; */
+	margin: auto;
+}
+
+/* header part css start */
+#header {
+	border-bottom: 1px solid rgba(128, 128, 128, 0.369);
+}
+
+#header .content {
+	display: flex;
+}
+
+#header .content .greetings {
+	/* border: 1px solid red; */
+}
+
+#header .content .greetings p {
+	color: var(--light_black);
+	font-size: 14px;
+	margin: 15px 0px;
+}
+
+#header .content .short_links {
+	/* border: 1px solid rgb(0, 26, 255); */
+	flex: 1;
+}
+
+#header .content .short_links ul {
+	height: 100%;
+	display: flex;
+	/* border: 1px solid green; */
+	gap: 30px;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+#header .content .short_links ul li {
+	position: relative;
+}
+#header .content .short_links ul li:hover > ul {
+	opacity: 1;
+	visibility: visible;
+}
+#header .content .short_links ul li ul {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	width: 100px;
+	background-color: white;
+	padding: 10px;
+	border: 1px solid #e9e9e9;
+	border-radius: 5px;
+	top: 30px;
+	left: 0;
+	z-index: 999;
+	height: 87px;
+	display: block;
+	transition-duration: 0.3s;
+}
+#header .content .short_links ul li ul li {
+	margin: 5px 0px;
+}
+#header .content .short_links ul li ul li a {
+}
+
+#header .content .short_links ul li i {
+	color: var(--light_black);
+	font-size: 14px;
+}
+
+#header .content .short_links ul li a {
+	color: var(--light_black);
+	font-size: 14px;
+	transition-duration: 0.3s;
+	font-weight: 400;
+}
+
+#header .content .short_links ul li a:hover {
+	color: var(--dark_black);
+	font-weight: 600;
+}
+/* header part end */
+
+/* nav part start */
+nav {
+    padding: 30px 0px;
+}
+nav .nav_content {
+	/* border: 1px solid red; */
+	display: flex;
+    gap: 20px;
+}
+nav .nav_content .left {
+	/* border: 1px solid red; */
+	width: 265px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+nav .nav_content .left .logo {
+}
+nav .nav_content .left .toggle_btn {
+	background-color: transparent;
+	border: 0;
+	outline: 0;
+}
+nav .nav_content .left .toggle_btn i {
+	font-size: 25px;
+}
+nav .nav_content .mid {
+	/* border: 1px solid red; */
+	flex: 1;
+	display: grid;
+	justify-content: center;
+	grid-template-columns: 1fr;
+	align-items: center;
+}
+nav .nav_content .mid form {
+	border: 1px solid #fed700;
+	border-radius: 25px;
+	padding: 12px;
+	display: flex;
+	position: relative;
+}
+nav .nav_content .mid form input {
+	flex: 1;
+	border: 1px solid white;
+}
+nav .nav_content .mid form input:focus {
+	outline: 0;
+}
+nav .nav_content .mid form select {
+	margin-right: 50px;
+	border: 1px solid white;
+}
+nav .nav_content .mid form button {
+	color: black;
+	background-color: #fed700;
+	position: absolute;
+	height: 100%;
+	width: 50px;
+	text-align: center;
+	padding: 0;
+	border: none;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+	right: 0;
+	top: 0;
+}
+nav .nav_content .mid form button i {
+	margin: 0;
+}
+nav .nav_content .right {
+	/* border: 1px solid red; */
+	width: 265px;
+}
+nav .nav_content .right ul {
+	display: flex;
+	height: 100%;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 20px;
+	/* border: 1px solid red; */
+}
+nav .nav_content .right ul li {
+}
+nav .nav_content .right ul li a {
+	color: rgb(58, 58, 58);
+    position: relative;
+}
+
+nav .nav_content .right ul li a:hover {
+	color: black;
+}
+nav .nav_content .right ul li a i {
+    margin-right: 20px;
+}
+nav .nav_content .right ul li a .total_amount {
+}
+nav .nav_content .right ul li a .total_qty {
+    position: absolute;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #fed700;
+    left: 10px;
+    min-width: 20px;
+    text-align: center;
+    font-size: 12px;
+    top: -20px;
+}
+/* nav part end */
